@@ -1,4 +1,3 @@
-import React from 'react';
 import { Github, Linkedin, Mail, Briefcase } from 'lucide-react';
 
 const Navbar = () => {
