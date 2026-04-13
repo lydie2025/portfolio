@@ -49,6 +49,7 @@ const About = () => {
               </li>
             ))}
           </ul>
+          
         </div>
       </div>
     </section>

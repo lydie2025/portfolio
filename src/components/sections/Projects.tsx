@@ -1,50 +1,89 @@
 import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import adminImg from '../../assets/admin.png';
+import rheamatecImg from '../../assets/Rheamatec.png';
+import annuaire from '../../assets/annuaire.png';
+import cogep from '../../assets/cogep.png';
+import global from '../../assets/global.png';
 
-// Importation de l'image
-import Rheamatec from '../../assets/Rheamatec.png';
+// Définition de l'interface pour TypeScript
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  techs: string[];
+  image: string; 
+}
 
 const Projects = () => {
-  // On définit les données pour éviter de répéter le code HTML
-  const projectData = [
+  const projectData: Project[] = [
     {
       id: 1,
       title: "RHEAMAR TECH",
-      description: "Built a high-end corporate ecosystem for an IT agency specializing in Fullstack, Mobile, and DevOps solutions. Engineered with a focus on high performance, scalability, and intuitive user experiences.",
-      techs: ["React.js", "Tailwind CSS", "UI/UX", "Node Js"]
+      description: "Built a high-end corporate ecosystem for an IT agency specializing in Fullstack, Mobile, and DevOps solutions.",
+      techs: ["React.js", "Tailwind CSS", "UI/UX", "Node Js"],
+      image: rheamatecImg 
     },
     {
       id: 2,
-      title: "RHEAMAR TECH",
-      description: "Built a high-end corporate ecosystem for an IT agency specializing in Fullstack, Mobile, and DevOps solutions. Engineered with a focus on high performance, scalability, and intuitive user experiences.",
-      techs: ["React.js", "Node.js", "MongoDB", "ShadCn UI", "Tailwind"]
+      title: "Dashbord admin",
+      description: "Blablablalablablablablablablalablablabla, Mobile, and DevOps solutions.",
+      techs: ["React.js", "Node.js", "PostgreSQL", "Prisma", "ShadCn UI", "Tailwind"],
+      image: adminImg 
+    },
+    {
+      id: 3,
+      title: "Annuaire medicale",
+      description: "Blablablalablablablablablablalablablabla, Mobile, and DevOps solutions.",
+      techs: ["React.js", "Node.js", "Chakra", "material-ui","Nodemeller", "Tailwind"],
+      image: annuaire 
+    },
+    {
+      id: 4,
+      title: "Cogep ltd",
+      description: "Blablablalablablablablablablalablablabla, Mobile, and DevOps solutions.",
+      techs: ["React.js", "material-ui", "emailjs", "Tailwind CSS"],
+      image: cogep 
+    },
+    {
+      id: 5,
+      title: "global group",
+      description: "Blablablalablablablablablablalablablabla, Mobile, and DevOps solutions.",
+      techs: ["React.js","material-ui", "Tailwind CSS"],
+      image: global 
     }
   ];
 
   return (
-    <div className="min-h-screen bg-black p-8 flex flex-col items-center gap-12">
+    // Changement : bg-white au lieu de bg-black
+    <div className="min-h-screen bg-white p-8 flex flex-col items-center gap-12">
+      <h3 className="mb-4 text-sm font-black tracking-tighter uppercase italic text-zinc-900">
+            SELECTED WORKS
+      </h3>
+      <p>
+          I specialize in{' '}, A glimpse into the applications 
+          I've built, focusing on clean code and seamless user experiences.
+        </p>
       {projectData.map((project) => (
         <div key={project.id} className="max-w-2xl w-full font-sans">
-          {/* Conteneur de l'image avec bordure et effet de groupe */}
-          <Card className="relative overflow-hidden border-zinc-800 bg-zinc-900/50 group rounded-2xl">
+          
+          {/* Card : bordures gris clair pour fond blanc */}
+          <Card className="relative overflow-hidden border-zinc-200 bg-zinc-50 group rounded-2xl shadow-sm">
             <CardContent className="p-0">
               <div className="relative aspect-video w-full overflow-hidden">
                 <img 
-                  src={Rheamatec} 
+                  src={project.image} // DYNAMIQUE : utilise project.image
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  // Si l'image ne charge pas, on affiche un fond de secours
-                  onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/1a1a1a/ffffff?text=Image+Non+Trouvée"; }}
                 />
                 
-                {/* Overlay des technologies */}
                 <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
                   {project.techs.map((tech) => (
                     <Badge 
                       key={tech}
                       variant="secondary" 
-                      className="bg-black/60 hover:bg-black/80 text-white border border-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-[12px] font-medium"
+                      className="bg-white/80 hover:bg-white text-zinc-900 border border-zinc-200 backdrop-blur-md px-4 py-1.5 rounded-full text-[12px] font-medium"
                     >
                       {tech}
                     </Badge>
@@ -54,20 +93,19 @@ const Projects = () => {
             </CardContent>
           </Card>
 
-          {/* Section Texte */}
+          {/* Section Texte : Couleurs adaptées au fond blanc */}
           <div className="mt-8 flex justify-between items-start gap-4">
             <div className="space-y-4">
-              <h2 className="text-3xl font-black tracking-tighter uppercase italic text-white">
+              <h2 className="text-3xl font-black tracking-tighter uppercase italic text-zinc-900">
                 {project.title}
               </h2>
-              <p className="text-zinc-400 text-lg leading-relaxed">
+              <p className="text-zinc-600 text-lg leading-relaxed">
                 {project.description}
               </p>
             </div>
 
-            {/* Bouton Lien Externe */}
-            <button className="flex-shrink-0 p-4 rounded-full border border-zinc-800 hover:bg-zinc-800 transition-all group">
-              <ExternalLink className="w-6 h-6 text-zinc-400 group-hover:text-white" />
+            <button className="flex-shrink-0 p-4 rounded-full border border-zinc-200 hover:bg-zinc-100 transition-all group">
+              <ExternalLink className="w-6 h-6 text-zinc-500 group-hover:text-zinc-900" />
             </button>
           </div>
         </div>
