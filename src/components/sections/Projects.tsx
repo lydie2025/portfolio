@@ -28,35 +28,34 @@ const Projects = () => {
     {
       id: 2,
       title: "Dashbord admin",
-      description: "Blablablalablablablablablablalablablabla, Mobile, and DevOps solutions.",
+      description: "Built a high-end corporate ecosystem for an IT agency specializing in Fullstack, Mobile, and DevOps solutions.",
       techs: ["React.js", "Node.js", "PostgreSQL", "Prisma", "ShadCn UI", "Tailwind"],
       image: adminImg 
     },
     {
       id: 3,
       title: "Annuaire medicale",
-      description: "Blablablalablablablablablablalablablabla, Mobile, and DevOps solutions.",
+      description: "Built a high-end corporate ecosystem for an IT agency specializing in Fullstack, Mobile, and DevOps solutions.",
       techs: ["React.js", "Node.js", "Chakra", "material-ui","Nodemeller", "Tailwind"],
       image: annuaire 
     },
     {
       id: 4,
       title: "Cogep ltd",
-      description: "Blablablalablablablablablablalablablabla, Mobile, and DevOps solutions.",
+      description: "Built a high-end corporate ecosystem for an IT agency specializing in Fullstack, Mobile, and DevOps solutions.",
       techs: ["React.js", "material-ui", "emailjs", "Tailwind CSS"],
       image: cogep 
     },
     {
       id: 5,
       title: "global group",
-      description: "Blablablalablablablablablablalablablabla, Mobile, and DevOps solutions.",
+      description: "Built a high-end corporate ecosystem for an IT agency specializing in Fullstack, Mobile, and DevOps solutions.",
       techs: ["React.js","material-ui", "Tailwind CSS"],
       image: global 
     }
   ];
 
   return (
-    // Changement : bg-white au lieu de bg-black
     <div className="min-h-screen bg-white p-8 flex flex-col items-center gap-12">
       <h3 className="mb-4 text-sm font-black tracking-tighter uppercase italic text-zinc-900">
             SELECTED WORKS
@@ -73,7 +72,7 @@ const Projects = () => {
             <CardContent className="p-0">
               <div className="relative aspect-video w-full overflow-hidden">
                 <img 
-                  src={project.image} // DYNAMIQUE : utilise project.image
+                  src={project.image} 
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
