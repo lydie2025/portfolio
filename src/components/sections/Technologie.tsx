@@ -4,7 +4,7 @@ import { FaReact, FaAngular, FaNodeJs, FaBrain } from "react-icons/fa";
 import { 
   SiJavascript, SiTypescript, SiMongodb, 
   SiLaravel, SiMysql, SiFirebase, 
-  SiNestjs, SiOpenai, 
+  SiOpenai, 
   SiPostgresql,
   SiPrisma,
   SiHtml5,
@@ -14,11 +14,9 @@ import {
 } from "react-icons/si";
 import { GiChaingun } from "react-icons/gi";
 
-// Import des composants Shadcn UI
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 
-// Typage des technologies
 interface TechItem {
   name: string;
   icon: React.ReactNode;
@@ -40,7 +38,6 @@ const technologies: TechData = {
   ],
   backend: [
     { name: "Node.js", icon: <FaNodeJs size={32} />, color: "text-[#339933]" },
-    { name: "NestJS", icon: <SiNestjs size={32} />, color: "text-[#E0234E]" },
     { name: "Laravel", icon: <SiLaravel size={32} />, color: "text-[#FF2D20]" },
     { name: "Dart", icon: <SiDart size={32} />, color: "text-[#0175C2]" },
     { name: "PHP", icon: <SiPhp size={32} />, color: "text-[#777BB4]" }
@@ -73,7 +70,7 @@ const Technologie = () => {
           /* Texte en blanc/zinc-100 */
           className="text-4xl font-black tracking-tighter text-zinc-100"
         >
-          Notre Stack Technologique
+          Technologies I work with
         </motion.h2>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}

@@ -1,6 +1,8 @@
+import  Contact  from './sections/Contact';
 import About from './sections/About';
 import Projects from './sections/Projects';
 import Technologie from './sections/Technologie';
+
 
 const RightPanel = () => {
   return (
@@ -8,6 +10,7 @@ const RightPanel = () => {
       <About />
       {<Projects />}
       {<Technologie />}
+      {<Contact />}
     </main>
   );
 };
