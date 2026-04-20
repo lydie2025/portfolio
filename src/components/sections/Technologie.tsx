@@ -79,7 +79,7 @@ const Technologie = () => {
           /* Texte gris plus clair pour le contraste */
           className="text-zinc-400 text-lg max-w-2xl mx-auto"
         >
-          Solutions robustes et évolutives basées sur les technologies modernes.
+          Robust and scalable solutions built with modern technologies.
         </motion.p>
       </div>
 

@@ -21,35 +21,28 @@ const Projects = () => {
     {
       id: 1,
       title: "RHEAMAR TECH",
-      description: "Built a high-end corporate ecosystem for an IT agency specializing in Fullstack, Mobile, and DevOps solutions.",
+      description: "Development of a robust web infrastructure for a multi-sector technology partner. The architecture is optimized for complex web and mobile application integration as well as web design, ensuring scalability aligned with the company's growth.",
       techs: ["React.js", "Tailwind CSS", "UI/UX", "Node Js"],
       image: rheamatecImg 
     },
     {
       id: 2,
-      title: "Dashbord admin",
-      description: "Built a high-end corporate ecosystem for an IT agency specializing in Fullstack, Mobile, and DevOps solutions.",
-      techs: ["React.js", "Node.js", "PostgreSQL", "Prisma", "ShadCn UI", "Tailwind"],
-      image: adminImg 
-    },
-    {
-      id: 3,
       title: "Annuaire medicale",
-      description: "Built a high-end corporate ecosystem for an IT agency specializing in Fullstack, Mobile, and DevOps solutions.",
+      description: "Development of the Cameroon Medical Directory, a pioneering platform for centralized health data. This interactive portal leverages web technologies to map the national medical ecosystem, consolidating detailed profiles and contact information for healthcare providers across the country.",
       techs: ["React.js", "Node.js", "Chakra", "material-ui","Nodemeller", "Tailwind"],
       image: annuaire 
     },
     {
-      id: 4,
+      id: 3,
       title: "Cogep ltd",
-      description: "Built a high-end corporate ecosystem for an IT agency specializing in Fullstack, Mobile, and DevOps solutions.",
+      description: "Design of a professional platform dedicated to organizational consulting and wealth management. A solution designed to optimize the presentation of complex services (tax, legal) and strengthen the relationship between the firm and its clients.",
       techs: ["React.js", "material-ui", "emailjs", "Tailwind CSS"],
       image: cogep 
     },
     {
-      id: 5,
+      id: 4,
       title: "global group",
-      description: "Built a high-end corporate ecosystem for an IT agency specializing in Fullstack, Mobile, and DevOps solutions.",
+      description: "Implementation of a user-centric automotive services platform for GLOBAL CAR CONSULTING. A solution designed to simplify complex processes through personalized support and an intuitive interface.",
       techs: ["React.js","material-ui", "Tailwind CSS"],
       image: global 
     }

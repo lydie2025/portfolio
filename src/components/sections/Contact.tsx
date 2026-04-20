@@ -47,8 +47,7 @@ function Contact() {
           transition={{ delay: 0.1 }}
           className="text-zinc-400 text-lg max-w-2xl mx-auto"
         >
-          Pour plus d'informations sur mes services, tarifs ou pour discuter de votre projet,
-          n'hésitez pas à me contacter.
+          For more information regarding my services and rates, or to discuss your project, please feel free to contact me.
         </motion.p>
       </div>
 
