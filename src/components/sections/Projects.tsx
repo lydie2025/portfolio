@@ -1,7 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import adminImg from '../../assets/admin.png';
 import rheamatecImg from '../../assets/Rheamatec.png';
 import annuaire from '../../assets/annuaire.png';
 import cogep from '../../assets/cogep.png';
