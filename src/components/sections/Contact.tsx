@@ -39,7 +39,7 @@ function Contact() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-4xl font-black tracking-tighter text-zinc-100"
         >
-          contact me for I work with
+          contact me to get started
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
